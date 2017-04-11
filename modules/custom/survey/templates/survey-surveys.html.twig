@@ -1,0 +1,16 @@
+<div class='table-responsive'>          
+	<table class='table'>
+		<thead>
+			<tr>
+				<th>Survey</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				{% for survey in surveys %}
+					<td><a href="/survey/surveys/{{ survey.nid.value }}">{{ survey.title.value }}</a></td>
+				{% endfor %}
+			</tr>
+		</tbody>
+	</table>
+</div>

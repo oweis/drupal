@@ -1,0 +1,9 @@
+# Package info
+type: module
+name: Social Media Share Buttons
+description: Custom field for Social Media Share Buttons (Linkedin, Twitter, Facebook ...).
+core: 8.x
+
+# Dependencies
+dependences:
+  - field

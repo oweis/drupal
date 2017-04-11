@@ -1,0 +1,15 @@
+<?php
+
+use Drupal\social_media_shares\Controller\SharesController;
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function social_media_shares_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+    $form['#attached']['library'][] = 'social_media_shares/shareable';
+    $form['#attached']['library'][] = 'social_media_shares/font-awesome';
+    return $form;
+}
+
+?>

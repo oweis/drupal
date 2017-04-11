@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type
+    - node.type.problem
+  module:
+    - options
+id: node.problem.field_type
+field_name: field_type
+entity_type: node
+bundle: problem
+label: Type
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'N'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,7 @@
+shares_link:
+  path:  '/shares/{nodeId}'
+  defaults:
+    _controller:  '\Drupal\social_media_shares\Controller\SharesController::storeCount'
+    _title: 'Social Media Shares'
+  requirements:
+    _permission: 'access content'

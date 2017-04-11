@@ -1,0 +1,34 @@
+<h3>Check results by surveys : </h3>
+<div class='table-responsive'>          
+	<table class='table'>
+		<thead>
+			<tr>
+				<th>Survey</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				{% for survey in surveys %}
+					<td><a href="/survey/results/survey/{{survey.nid.value}}">{{ survey.title.value }}</a></td>
+				{% endfor %}
+			</tr>
+		</tbody>
+	</table>
+</div>
+<h3>Check results by users : </h3>
+<div class='table-responsive'>          
+	<table class='table'>
+		<thead>
+			<tr>
+				<th>User</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				{% for user in users %}
+					<td><a href="/survey/results/user/{{user.uid.value}}">{{ user.name.value }}</a></td>
+				{% endfor %}
+			</tr>
+		</tbody>
+	</table>
+</div>

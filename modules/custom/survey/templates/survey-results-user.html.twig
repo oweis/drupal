@@ -1,0 +1,24 @@
+<h4> Surveys results for the user : {{ user }} </h4>
+{% for submission in submissions %}
+<h3>{{ submission.survey }}</h3>
+<div class='table-responsive'>          
+	<table class='table'>
+		<thead>
+			<tr>
+				{% for question in submission.questions %}
+				<th>{{ question | raw }}</th>
+				{% endfor %}
+				<th>Result</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				{% for response in submission.responses %}
+				<th>{{ response | raw }}</th>
+				{% endfor %}
+				<th>{{submission.result}}</th>
+			</tr>
+		</tbody>
+	</table>
+</div>
+{% endfor %}

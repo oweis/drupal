@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.problem.field_option_correct
+    - field.field.node.problem.field_option_incorrect
+    - field.field.node.problem.field_question
+    - field.field.node.problem.field_type
+    - node.type.problem
+  module:
+    - options
+    - text
+    - user
+id: node.problem.default
+targetEntityType: node
+bundle: problem
+mode: default
+content:
+  field_option_correct:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_option_incorrect:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_question:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_type:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,55 @@
+survey.surveys:
+ path: '/survey/surveys'
+ defaults:
+   _title: 'All Surveys'
+   _controller: '\Drupal\survey\Controller\SurveyController::displaySurveys'
+ requirements:
+   _permission: 'access content'
+
+survey.surveys.survey:
+ path: '/survey/surveys/{surveyId}'
+ defaults:
+   _title: 'Survey Form'
+   _form: '\Drupal\survey\Form\SurveyForm'
+ requirements:
+   _permission: 'access content'
+
+survey.results:
+ path: '/survey/results'
+ defaults:
+   _title: 'Surveys Result'
+   _controller: '\Drupal\survey\Controller\SurveyController::displayResults'
+ requirements:
+   _permission: 'access content'
+
+survey.results.survey:
+ path: '/survey/results/survey/{surveyId}'
+ defaults:
+   _title: 'Survey Result By Survey'
+   _controller: '\Drupal\survey\Controller\SurveyController::displayResultsSurvey'
+ requirements:
+   _permission: 'access content'
+
+survey.results.user:
+ path: '/survey/results/user/{userId}'
+ defaults:
+   _title: 'Survey Result By User'
+   _controller: '\Drupal\survey\Controller\SurveyController::displayResultsUser'
+ requirements:
+   _permission: 'access content'
+
+survey.sorry:
+ path: '/survey/sorry'
+ defaults:
+   _title: 'Sorry! The response has not been submitted'
+   _controller: '\Drupal\survey\Controller\SurveyController::displaySorry'
+ requirements:
+   _permission: 'access content'
+
+survey.thanks:
+ path: '/survey/thanks'
+ defaults:
+   _title: 'Thank you : The response has been submitted successfully'
+   _controller: '\Drupal\survey\Controller\SurveyController::displayThankYou'
+ requirements:
+   _permission: 'access content'

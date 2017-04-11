@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains survey.module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function survey_theme()
+{
+    return [
+        'survey-results' => [
+            'variables' => ['users' => [], 'surveys' => []],
+            'template' => 'survey-results'
+        ],
+        'survey-surveys' => [
+            'variables' => ['surveys' => []],
+            'template' => 'survey-surveys'
+        ],
+        'survey-results-survey' => [
+            'variables' => ['submissions' => [], 'questions' => []],
+            'template' => 'survey-results-survey'
+        ], 
+        'survey-results-user' => [
+            'variables' => ['submissions' => [], 'user' => []],
+            'template' => 'survey-results-user'
+        ], 
+        'survey-thank-you' => [
+            'template' => 'survey-thank-you'
+        ], 
+        'survey-sorry' => [
+            'template' => 'survey-sorry'
+        ], 
+    ];
+}
+
+

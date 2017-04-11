@@ -1,0 +1,24 @@
+<div class='table-responsive'>          
+	<table class='table'>
+		<thead>
+			<tr>
+				<th>User</th>
+				{% for question in questions %}
+				<th>{{ question | raw }}</th>
+				{% endfor %}
+				<th>Result</th> 
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				{% for submission in submissions %}
+					<td>{{ submission.name | raw }}</td>
+						{% for response in submission.responses %}
+					<td>{{ response | raw }}</td>
+						{% endfor %}
+					<td>{{ submission.result }}</td> 
+				{% endfor %}
+			</tr>
+		</tbody>
+	</table>
+</div>

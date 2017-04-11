@@ -1,0 +1,5 @@
+name: Survey
+description: A Simple Survey Module.
+core: 8.x
+package: Custom
+type: module

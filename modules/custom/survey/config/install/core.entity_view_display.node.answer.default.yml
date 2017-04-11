@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.answer.field_problem
+    - field.field.node.answer.field_response
+    - field.field.node.answer.field_result
+    - node.type.answer
+  module:
+    - user
+id: node.answer.default
+targetEntityType: node
+bundle: answer
+mode: default
+content:
+  field_problem:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_response:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_result:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  links:
+    weight: 100
+hidden: {  }

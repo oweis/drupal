@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_option_correct
+    - node.type.problem
+id: node.problem.field_option_correct
+field_name: field_option_correct
+entity_type: node
+bundle: problem
+label: 'Option correct'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
